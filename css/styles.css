@@ -1,3 +1,7 @@
+:root {
+  --first-color: #4d5ae5;;
+ 
+}
 body{
     font-family: 'Roboto',sans-serif;
     color: #434455;
@@ -855,7 +859,7 @@ letter-spacing: 4%;
 text-decoration: underline;
 text-decoration-style: solid;
 text-decoration-thickness: 0%;
-color:var(#4d5ae5);
+color:var(--first-color);
 }
 
 .checkbox:checked + .label > .custom-checkbox {
