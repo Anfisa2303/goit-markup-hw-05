@@ -1,7 +1,6 @@
 :root {
   --first-color: #4d5ae5;
- 
-}
+ }
 body{
     font-family: 'Roboto',sans-serif;
     color: #434455;
@@ -585,7 +584,7 @@ header{
 .modal {
  background: #fff;
  border-radius: 4px;
-position: absolute;
+/*position: absolute;*/
 width: 408px;
 min-height: 584px;
 background: #fcfcfc;
@@ -850,7 +849,7 @@ letter-spacing: 0.04em;
 color:#8e8f99; 
 
 }
-.privcy-link {
+.privacy-link {
 font-family: Roboto;
 font-weight: 400;
 font-size: 12px;
@@ -859,7 +858,7 @@ letter-spacing: 4%;
 text-decoration: underline;
 text-decoration-style: solid;
 text-decoration-thickness: 0%;
-color:var(--first-color,#4d5ae5);
+color: var(--first-color);
 }
 
 .checkbox:checked + .label > .custom-checkbox {
