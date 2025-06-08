@@ -570,7 +570,7 @@ header{
   align-items: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
  .backdrop.is-open{
@@ -581,34 +581,43 @@ header{
 .modal {
  background: #fff;
  border-radius: 4px;
-
+position: absolute;
+width: 408px;
+min-height: 584px;
+background: #fcfcfc;
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2); 
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+padding: 72px 24px 24px 24px;
 }
 .close {
-/*border-radius: 4px;*/
+border-radius: 50%;
 width: 24px;
 height: 24px;
-margin: 24px;
-margin-left:auto;
-
+top: 24px; 
+right: 24px;
+position: absolute; 
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #e7e9fc; 
+border: 1px solid rgba(0, 0, 0, 0.1);
+padding: 0;
+cursor: pointer;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.close-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #E7E9FC;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  fill:#f4f4fd;
+.close:hover,
+.close:focus{
+    background-color: #404bbf;
+    border: none;
 }
 
  .icon-close{
-    fill: #2e2f42;
-    width: 8px;
-    height: 8px;
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
  }
-
+ .icon-close:hover,
+ .icon-close:focus{
+    fill: #ffffff;
+ }
 .footer-email {
   margin-left: 80px;
 }
@@ -649,15 +658,15 @@ margin-left:auto;
     font-weight: 400;
     font-size: 12px;
     background-color: transparent;
-
-    line-height: 2;
+    margin-top: 16px;
+    line-height: 1.5;
     letter-spacing: 0.04em;
     padding-left: 16px;
     color: #ffffff;
 }
 .footer-button{
     border-radius: 4px;
-    min-width: 165px;
+    width: 165px;
     height: 40px;
     background: #4d5ae5;
     font-family: "Roboto", sans-serif;
@@ -672,17 +681,13 @@ justify-content: center;
 align-items: center; 
 cursor: pointer;
 border: none;
-align-self: flex-end;
+bottom: 0;
 }
 .footer-button:hover
 .footer-button:focus{
 background: #4d5ae5;
 }
-button svg{
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 16px;
-}
+
 .text-input {
     margin-bottom: 8px;
 }
@@ -737,7 +742,7 @@ line-height: 150%;
 letter-spacing: 0.02em;
 text-align: center;
 color: #2e2f42;
-margin: 24px 24px 16px 24px;
+/*margin: 24px 24px 16px 24px;*/
 }
 .footer-email-items {
     display: flex;
@@ -748,7 +753,7 @@ margin: 24px 24px 16px 24px;
     justify-content: center;
 }
 .inputs{
-margin: 16px 24px;
+
 transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .inputs:hover
