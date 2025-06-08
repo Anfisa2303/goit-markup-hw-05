@@ -609,15 +609,13 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cu
 .close:focus{
     background-color: #404bbf;
     border: none;
+    fill: #ffffff;
 }
 
  .icon-close{
    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
  }
- .icon-close:hover,
- .icon-close:focus{
-    fill: #ffffff;
- }
+
 .footer-email {
   margin-left: 80px;
 }
@@ -639,14 +637,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cu
 .icon{
    margin: 16px;
 }
-.inputs input{
-    border: 1px solid rgba(46, 47, 66, 0.4);
-    border-radius: 4px;
-    width: 100%;
-    height: 40px;
-    padding-left: 40px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 
 .footer-input{
     border: 1px solid #ffffff;
@@ -692,6 +683,19 @@ background: #4d5ae5;
 }
 .text-input {
     margin-bottom: 8px;
+    position: relative;
+}
+
+.input-item{
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(46, 47, 66, 0.4); 
+    border-radius: 4px;
+    background-color: transparent;
+    padding-left: 38px;
+    outline: transparent; 
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    border-color: #4D5AE5;
 }
  
 .check-icon {
@@ -744,7 +748,7 @@ line-height: 150%;
 letter-spacing: 0.02em;
 text-align: center;
 color: #2e2f42;
-/*margin: 24px 24px 16px 24px;*/
+margin-bottom: 16px;
 }
 .footer-email-items {
     display: flex;
@@ -755,12 +759,23 @@ color: #2e2f42;
     justify-content: center;
 }
 .inputs{
-
+margin-bottom: 8px;
 transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .inputs:hover
 .inputs:focus{
     background-color: #4D5AE5;
+}
+.input-label{
+    font-size: 12px; 
+    font-family: Roboto;
+font-weight: 400;
+font-size: 12px;
+line-height: 1.17;
+letter-spacing: 0.04em;
+color:#8e8f99;
+display: block;
+margin-bottom: 4px;
 }
 textarea {
 border: 1px solid rgba(46, 47, 66, 0.4);
@@ -778,7 +793,7 @@ padding-left: 16px;
 padding-top: 8px;
 }
 
-.inputs label {
+/*.inputs label {
 display: block;
 margin-bottom: 4px;
 font-family: Roboto;
@@ -786,12 +801,12 @@ font-weight: 400;
 font-size: 12px;
 line-height: 1.17;
 letter-spacing: 4%;
-}
+}*/
 .input-icon {
  position: absolute;
- margin-left: 16px;
- margin-top: 8px;
- margin-bottom: 8px;
+ left: 16px;
+ top: 50%;
+ transform: translateY(-50%); 
  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input:focus{
