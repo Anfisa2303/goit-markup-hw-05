@@ -1,5 +1,5 @@
 :root {
-  --first-color: #4d5ae5;;
+  --first-color: #4d5ae5;
  
 }
 body{
@@ -859,7 +859,7 @@ letter-spacing: 4%;
 text-decoration: underline;
 text-decoration-style: solid;
 text-decoration-thickness: 0%;
-color:var(--first-color);
+color:var(--first-color,#4d5ae5);
 }
 
 .checkbox:checked + .label > .custom-checkbox {
