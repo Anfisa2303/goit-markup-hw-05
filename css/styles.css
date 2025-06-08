@@ -584,7 +584,7 @@ header{
 .modal {
  background: #fff;
  border-radius: 4px;
-/*position: absolute;*/
+position: absolute;
 width: 408px;
 min-height: 584px;
 background: #fcfcfc;
@@ -817,7 +817,7 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .input-item:focus{
    border-color: #4D5AE5;
 }
-.input-item:focus svg{
+.input-item:focus-within{
    fill: #4D5AE5; 
 }
 .input-icon:focus{
